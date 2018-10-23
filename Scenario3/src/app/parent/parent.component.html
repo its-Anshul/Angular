@@ -1,0 +1,14 @@
+<div class="container">
+
+  
+
+    <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" #name required (keyup)="0" >
+        </div>
+      </form>
+    </div>
+    {{getValue(name.value)}}
+    <button (click)="loadMyChildComponent();">Submit</button>
+    <app-child *ngIf="loadComponent" [greetMessage]="values"></app-child>

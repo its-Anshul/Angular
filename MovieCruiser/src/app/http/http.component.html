@@ -1,5 +1,6 @@
-</div>
+<div>
 
   hello
-  {{movie}}
+  <li *ngFor="let movie of movies">{{movie.movieName}}</li>
+  {{errorMsg}}
 </div>

@@ -12,9 +12,14 @@ export class HttpComponent implements OnInit {
 
   public movie = [];
 
+  public errorMsg = '';
+
   ngOnInit() {
      this.DataService.getMovie()
-         .subscribe(data => this.movie = data);
+         .subscribe(data => this.movie = data,
+          error=> this.errorMsg = error);
+      console.log(this.movie);
   }
+  
 
 }
